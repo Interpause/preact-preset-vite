@@ -143,15 +143,15 @@ export default function preactPlugin({
 				},
 				plugins: [
 					...babelOptions.plugins,
-					[
-						config.isProduction
-							? "@babel/plugin-transform-react-jsx"
-							: "@babel/plugin-transform-react-jsx-development",
-						{
-							runtime: "automatic",
-							importSource: "preact",
-						},
-					],
+					// [
+					// 	config.isProduction
+					// 		? "@babel/plugin-transform-react-jsx"
+					// 		: "@babel/plugin-transform-react-jsx-development",
+					// 	{
+					// 		runtime: "automatic",
+					// 		importSource: "preact",
+					// 	},
+					// ],
 					...(config.isProduction ? [] : ["babel-plugin-transform-hook-names"]),
 				],
 				sourceMaps: true,
